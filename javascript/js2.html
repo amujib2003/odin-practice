@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Practice 2</title>
+</head>
+<body>
+
+    <script>
+        // A BigInt value is created by appending n to the end of an integer
+        // The "n" at the end means it's a BigInt
+        const bigInt = 1234567890123456789012345678901234567890n;
+        const int = 1234567890123456789012345678901234567890
+        console.log (bigInt)
+        console.log (int)
+
+        // "" and '' are simple quotes while `` (backticks) are extended functionality quotes
+        // backticks allow us to embed variables and expressions into a string by wrapping them in ${…}
+
+        let name = "John";
+        console.log (`Hello, ${name}!`);
+        console.log (`The result is ${1 + 2}`);
+
+        let nameFieldChecked = true;
+        let ageFieldChecked = false;
+
+        let isGreater = 4 > 1;
+        console.log (isGreater);
+        
+        // "null" value is just a special value which represents “nothing”, “empty” or “value unknown”
+        let age = null;
+        
+        // If a variable is declared, but not assigned, then its value is undefined:
+        let ageU;
+        console.log (ageU)
+
+        // Two more values which are special are "object" and "symbol"
+        // All other types are called "primitive" because their values can only contain a single thing while objects are used to store a collection of data.
+        // The "symbol" type is used to create unique identifiers for objects.
+
+        // The typeof operator returns the type of the operand.
+        console.log (typeof 1234567890123456789012345678901234567890n)
+
+        // 8 basic data types in JavaScript
+        // -number
+        // -bigint
+        // -string
+        // -boolean for true/false
+        // -null
+        // -undefined
+        // -symbol
+        // -object
+
+        const string = "The revolution will not be televised."
+        console.log (string);
+
+        // Strings decalred using backticks are a special kind of string called template literal.
+        // Template literals have special properties which are unique.
+
+        const one = "Hello, ";
+        const two = "how are you?";
+        const joined = `${one}${two}`;
+        console.log(joined);
+
+        // Concatentation using "+"
+        const greeting = "Hello";
+        const name2 = "Chris";
+        console.log(greeting + ", " + name2);
+
+
+        // You can include JavaScript expressions in template literals, as well as just variables, and the results will be included in the result:
+        const song = "Fight the Youth";
+        const score = 9;
+        const highestScore = 10;
+        const output = `I like the song ${song}. I gave it a score of ${
+            (score / highestScore) * 100
+        }%.`;
+        console.log (output);
+
+        // Template literals respect the line breaks in the source code, so you can write strings that span multiple lines like this:
+        const newLine = `One day you finally knew
+what you had to do, and began.`;
+        console.log(newLine);
+
+        // For the equivalent output using a normal string you have to include the line break character
+        // The line break character is \n
+        const newLineNormal = "One day you finally knew\nyou had to do, and began.";
+        console.log (newLineNormal);
+
+        // To include quotes into a string you can use the escape character which is a backslash.
+        const goodQuote1 = "She said \"I think so!\"";
+        console.log (goodQuote1);
+
+        // Second method without backslash.
+        const goodQuote2 = 'She said "I\'m not going in there!"';
+        console.log (goodQuote2);
+
+        // You can change strings to numbers and number to string with Number() and String() function.
+        const myString = "123";
+        const myNum = Number(myString);
+        console.log(typeof myNum);
+
+        const myNum2 = 123;
+        const myString2 = String(myNum2);
+        console.log (typeof myString2);
+    </script>
+
+</body>
+</html>

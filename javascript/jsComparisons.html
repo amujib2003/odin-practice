@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en>">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Comparisons</title>
+</head>
+<body>
+    
+    <script>
+        console.log (2 > 1);
+        console.log (2 == 1);
+        console.log (2 != 1);
+
+        // A comparison result can be assigned to a variable, just like any value:
+        let result = 5 > 4;
+        console.log (result);
+
+        /* To see whether a string is greater than another, JavaScript uses the so-called “dictionary” or “lexicographical” order.
+        In other words, strings are compared letter-by-letter.*/ 
+        console.log ('Z' > 'A');
+        console.log ('Glow' > 'Glee')
+        console.log ('Bee' > 'Be');
+        // Lowercase letters has a greater index than uppercase.
+        console.log ('a' > 'Z');
+        // When comparing values of different types, JavaScript converts the values to numbers.
+        console.log ('2' > 1);
+        console.log ('01' == 1);
+        // For boolean values, true becomes 1 and false becomes 0.
+        console.log (true == 1);
+        console.log (false == 0);
+        console.log ('' == false);
+
+        /* Conditional statements
+        - if (to specify a block of code to be executed, if a specified condition is true)
+        - else (to specify a block of code to be executed, if the same condition is flase)
+        - else if (to specify a new condition to test, if the first condition is false)
+        - switch (to specify many alternative blocks of code to be executed)*/ 
+        time = 21
+
+        if (time < 10) {
+            alert("Good morning");
+        } else if (time < 20) {
+            alert("Good day");
+        } else {
+            alert("Good evening");
+        }
+
+        /* There are four logical operators in JavaScript:
+        - || (OR)
+        - && (AND)
+        - ! (NOT)
+        - ?? (Nullish Coalescing)*/ 
+
+        // || (OR)
+        console.log (true || true);
+        console.log (false || true);
+        console.log (true || false);
+        console.log (false || false);
+
+        // If an operand is not a boolean, it’s converted to a boolean for the evaluation.
+        // For instance, the number 1 is treated as true, the number 0 as false:
+        if (1 || 0) {
+            alert('truthy!');
+        }
+
+        let hour = 12;
+        let isWeekend = true;
+        if (hour < 10 || hour > 18 || isWeekend) {
+            alert('The office is closed.');
+        }
+
+        /* Evaluates operands from left to right.
+           For each operand, converts it to boolean. If the result is true, stops and returns the original value of that operand.
+           If all operands have been evaluated (i.e. all were false), returns the last operand.*/ 
+        alert (null || 1 || 0);
+        alert (null || undefined || 0);
+        
+        let firstName = "";
+        let lastName = "";
+        let nickName = "SuperCoder";
+        alert(firstName || lastName || nickName || "Anonymous");
+
+        // Short-circuit evalution.
+        true || alert("not printed");
+        false || alert("printed");
+
+        // && (AND)
+        console.log (true && true);
+        console.log (true && false);
+        console.log (true || true && false);
+
+        /*Evaluates operands from left to right.
+          For each operand, converts it to a boolean. If the result is false, stops and returns the original value of that operand.
+          If all operands have been evaluated (i.e. all were truthy), returns the last operand.*/ 
+        alert (1 && 0);
+        alert (1 && 5);
+        alert (null && 5);
+        alert (true && true && null && true);
+        // Precedence of AND && is higher than OR ||
+
+        /* ! (NOT)
+        Converts the operand to boolean type: true/false.
+        Returns the inverse value.*/ 
+        alert (!true);
+        alert (!0);
+        // The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||.
+
+        /* syntax
+        if (condition) {
+          code to run if condition is true 
+        } else {
+          run some other code instead 
+        }
+
+        //Any value that is not false, undefined, null, 0, NaN, or an empty string ('') actually returns true when tested as a conditional statement
+
+        /*Switch 
+
+        switch (expression) {
+          case choice1:
+            // run this code
+            break;
+
+          case choice2:
+            // run this code instead
+            break;
+
+          // include as many cases as you like
+
+          default:
+            // actually, just run this code
+            break;
+        }
+        */ 
+
+        /* Ternary operator
+           condition ? run this code : run this code instead
+           The ternary or conditional operator is a small bit of syntax that tests a condition and returns one value/expression if it is true, and another if it is false
+           this can be useful in some situations, and can take up a lot less code than an if...else block if you have two choices that are chosen between via a true/false condition.*/ 
+        /*
+        const greeting = isBirthday
+          ? "happy birthday Mrs. Smith - we hope you have a great day!"
+          : "Good morning Mrs. Smith.";
+        */ 
+
+        // Ternary syntax
+        // let result = condition ? value1 : value2;
+
+
+        /* 
+        let result;
+
+        if (a + b < 4) {
+          result = 'Below';
+        } else {
+          result = 'Over';
+        }
+
+        // Same code but with ternary operator
+        let result = (a + b < 4) ? 'Below' : 'Over';
+        */ 
+
+        /*
+
+        let message;
+
+        if (login == 'Employee') {
+          message = 'Hello';
+        } else if (login == 'Director') {
+          message = 'Greetings';
+        } else if (login == '') {
+          message = 'No login';
+        } else {
+          message = '';
+        }
+
+        //same code but with ternary operator
+        let message = (login == 'Employee') ? 'Hello' :
+        (login == 'Director') ? 'Greetings' :
+        (login == '') ? 'No login' :
+        '';
+        */ 
+
+        /* switch syntax
+        
+        switch(x) {
+          case 'value1':  // if (x === 'value1')
+            ...
+            [break]
+
+          case 'value2':  // if (x === 'value2')
+            ...
+            [break]
+
+          default:
+            ...
+            [break]
+        }
+        
+        let a = 2 + 2;
+
+        switch (a) {
+          case 3:
+            alert( 'Too small' );
+            break;
+          case 4:
+            alert( 'Exactly!' );
+            break;
+          case 5:
+            alert( 'Too big' );
+            break;
+          default:
+            alert( "I don't know such values" );
+        }
+
+        let a = 3;
+
+        switch (a) {
+          case 4:
+            alert('Right!');
+            break;
+
+          case 3: // (*) grouped two cases
+          case 5:
+            alert('Wrong!');
+            alert("Why don't you take a math class?");
+            break;
+
+          default:
+            alert('The result is strange. Really.');
+        }
+        */ 
+
+        /* switch vs if else
+
+        switch (browser) {
+          case 'Edge':
+            alert( "You've got the Edge!" );
+            break;
+
+          case 'Chrome':
+          case 'Firefox':
+          case 'Safari':
+          case 'Opera':
+            alert( 'Okay we support these browsers too' );
+            break;
+
+          default:
+            alert( 'We hope that this page looks ok!' );
+        }
+
+        if(browser == 'Edge') {
+          alert("You've got the Edge!");
+        } else if (browser == 'Chrome'
+        || browser == 'Firefox'
+        || browser == 'Safari'
+        || browser == 'Opera') {
+          alert( 'Okay we support these browsers too' );
+        } else {
+          alert( 'We hope that this page looks ok!' );
+        }
+        */ 
+
+        
+    </script>
+
+</body>
+</html>

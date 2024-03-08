@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Script Methods</title>
+</head>
+<body>
+
+    <script>
+        // The length property returns the length of a string:
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = text.length;
+        console.log (length);
+
+        /* Extracting String Parts
+        There are 3 methods for extraxting a part of a string:
+        -slice(start, end)
+        -substring(start, end)
+        -substr(start, length)*/
+
+        /* Slice() extracts a part of a string and returns the extracted part in a new string.
+        The method takes 2 parameters: start position, and end position (end not included).*/
+
+        let list = "Apple, Banana, Kiwi";
+        let part = list.slice(15, 19);
+        console.log (part);
+
+        // If you omit the second parameter, the method will slice out the rest of the string:
+        let part2 = list.slice(7);
+        console.log (part2);
+
+        // If a parameter is negative, the position is counted from the end of the string:
+        let part3 = list.slice(-12, -6);
+        console.log (part3);
+
+        /* substring() is similar to slice().
+        The difference is that start and end values less than 0 are treated as 0 in substring().*/
+        let substringPart = list.substring(7,13);
+        console.log (substringPart);
+
+        /* substr() is similar to slice()
+        The difference is that the second parameter specifies the length of the extracted part.*/
+        let substrPart = list.substr(7, 6);
+        console.log (substrPart);
+        // If you omit the second parameter, substr() will slice out the rest of the string.
+
+        let substrPart2 = list.substr(-4);
+        console.log (substrPart2);
+
+        // The replace() method replaces a specified value with another value in a string:
+        let text1 = "Please visit Microsoft!";
+        let newText1 = text1.replace("Microsoft", "W3Schools");
+        console.log (newText1);
+
+        /* The replace() method does not change the string it is called on.
+           The replace() method returns a new string.
+           The replace() method replaces only the first match.
+           If you want to replace all matches, use a regular expression with the /g flag set*/
+
+        let text2 = "Please visit Microsoft and Microsoft!";
+        let newText2 = text2.replace("Microsoft", "W3Schools");
+        console.log(newText2);
+
+        /* By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work
+        To replace case insensitive, use a regular expression with an /i flag (insensitive):*/
+
+        let text3 = "Please visit Microsoft!";
+        let newText3 = text3.replace(/MICROSOFT/i, "W3Schools");
+        console.log (newText3);
+
+        let newText4 = text2.replace(/Microsoft/g, "W3Schools");
+        console.log (newText4);
+
+        let text5 = "I love cats. Cats are very easy to love. Cats are very popular.";
+        text5 = text5.replaceAll("Cats","Dogs");
+        text5 = text5.replaceAll("cats","dogs");
+        console.log(text5)
+
+        /*The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+        If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.*/
+        // text5 = text5.replaceAll(/Cats/g,"Dogs");
+        // text5 = text5.replaceAll(/cats/g,"dogs");
+
+        let text6 = "Hello World!";
+        let text7 = text6.toUpperCase();
+        console.log (text7)
+
+        let text8 = text6.toLowerCase();
+        console.log (text8);
+
+        let textH = "Hello";
+        let textW = "World";
+        let textS = textH.concat(" ", textW);
+        console.log (textS);
+
+        // You can also do trimEnd() to remove white space from the end
+        // Or trimStart() to remove white space from the beginning.
+        let textTrim = "             Hello World!                "
+        let newTextTrim = textTrim.trim();
+        console.log (newTextTrim);
+
+        // You can also do padEnd()
+        let textPad = "5";
+        let padded = textPad.padStart(4,"0");
+        console.log (padded);
+
+        /* There are 3 methods for extracting string characters:
+        -charAt(position)
+        -charCodeAt(position)
+        -property access []*/
+
+        // charAt() method returns the character at a specified index (position) in a string:
+        let textIndex = "HELLO WORLD";
+        let char = textIndex.charAt(0);
+        console.log (char);
+
+        // charCodeAt() method returns the unicode of the character at a specified index in a string:
+        let char2 = textIndex.charCodeAt(0);
+        console.log (char2);
+
+        let char3 = textIndex[0];
+        console.log (char3);
+
+        // A string can be converted to an array with the split() method:
+        let textArray = "a,b,c,d,e,f";
+        const myArray = textArray.split(",");
+        console.log (myArray[0]);
+
+        let textArray2 = "Hello";
+        const myArr = textArray2.split("");
+        console.log (myArr);
+    </script>
+
+</body>
+</html>

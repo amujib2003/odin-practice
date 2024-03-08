@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercises</title>
+</head>
+<body>
+    <script>
+
+        //exercise 1
+        const a = 1;
+        const b = 1;
+
+        let result;
+
+        result = a + b;
+        console.log (result);
+
+        //exercise 2 (unsure why it won't show true or false in console)
+        number = Number(prompt("enter a number"));
+
+        function numberChecker() {
+            if(number >= 10) {
+                console.log (true);
+            } else if (number < 10) {
+                console.log (false);
+            }
+        }
+
+        /*exercise 3
+        const a = "one plus eight"
+        const b = "22 times three"
+        const c = "the *remainder* of 5/4"
+        const d = "the variable 'a' minus 17"
+        const e = "the sum of the previous four variables"
+        */
+
+        const a1 = (1 + 8);
+        const b1 = (22 * 3);
+        const c1 = (5 % 4);
+        const d1 = (a1 - 17);
+        const e1 = (a1 + b1 + c1 + d1);
+        console.log (e1);
+
+        //exercise 4
+
+        const birthYear = 1948;
+        const thisYear = 1965;
+        const firstName = "Carlos";
+        const lastName = "Stevenson";
+        const fullName = firstName + " " + lastName;
+        const age = thisYear - birthYear; 
+
+        const greeting = "Hello! my name is " + firstName + " " + lastName + " and I am " + (thisYear - birthYear) + " years old.";
+        console.log (greeting);
+
+        const greeting2 = "Hello! my name is " + fullName + " and I am " + age + " years old.";
+        console.log (greeting2);
+
+        function favoriteAnimal(animal) {
+            return animal + " is my favorite animal!"
+        }
+
+        console.log(favoriteAnimal('Cat'))
+
+        /*
+        showMessage(..)     // shows a message
+        getAge(..)          // returns the age (gets it somehow)
+        calcSum(..)         // calculates a sum and returns the result
+        createForm(..)      // creates a form (and usually returns it)
+        checkPermission(..) // checks a permission, returns true/false
+        */ 
+
+    </script>
+</body>
+</html>

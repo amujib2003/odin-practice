@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS Practice</title>
+    <!-- Another way to include JavaScript into your webpage is through linking it externally
+    the same way you do with css.
+
+    <script src="FileName.js"></script>
+
+    -->
+</head>
+<body>
+    <script>
+      // Your JavaScript goes here! 
+      console.log("Hello, World!")
+
+        // JavaScript practice tasks
+        let admin,
+            name;
+        
+        name = "John";
+        admin = name;
+
+        alert(admin);
+
+        // Focus on giving your variables good names which aren't vague.
+        let ourPlanetName = "Earth";
+        let currentUserName = "John";
+
+        // Don't worry about not knowing the bottom part right now.
+        // The important part is knowing which const to make fully upper case while which ones to not. 
+        const BIRTHDAY = "18.04.1982";
+        const age = 25;
+
+        const myInt = 5;
+        const myFloat = 6.667;
+        console.log (typeof myInt);
+        console.log (typeof myFloat);
+
+        const lotsOfDecimal = 1.766649346923;
+        const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+        console.log (twoDecimalPlaces);
+
+        let myNumber = "74"
+        myNumber = Number(myNumber) + 3;
+        console.log (myNumber);
+
+        // Modulus operator outputs the remainder.
+        console.log (60 % 3)
+
+        // Increment operator outputs the number above the operand.
+        let num1 = 4;
+        num1 ++;
+        console.log (num1);
+
+        // Decrement operator outputs the number below the operand.
+        let num2 = 4;
+        num2 --;
+        console.log (num2);
+
+        // += Addition assignment, Adds the value on the right to the variable value on the left, then returns the new variable value.
+        // x += 4;  is a shortcut for x = x + 4;
+        // you can also do (subtraction assignment)-= 
+        // (divison assignment) /=  
+        // (multiplication assignment) *=
+
+        let x = 7;
+        x *= 4;
+        console.log (x);
+
+        let y = 14;
+        x /= y;
+        console.log (x);
+
+        // Comparison operators
+        // === Strict equality, Tests whether the left and right values are identical or not.
+        // !== Strict-non-equality, Tests whether the left and right values are not identical to one another.
+        // == and != test wether the values are the same, but they don't check if the datatypes are the same.
+        // This means if you compare a string with a number with strict equality it would output false due to the two different datatypes.
+
+        let s = "My";
+        console.log (s + " string");
+
+        // Unary + has the same effect as Number(apples).
+        let apples = "2";
+        let oranges = "3";
+        console.log (+apples + +oranges);
+
+        // For increment and decrement postfix returns the old value while prefix returns the new value.
+        let counter = 1;
+        let a = ++counter;
+        console.log (a);
+
+        let counterP = 1;
+        let b = counterP++;
+        console.log (b);
+        // This outputs 1 because the increment was after while the other counter outputs 2.
+    </script>
+</body>
+</html>
